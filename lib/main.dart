@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 void main() => runApp(const SignUpApp());
 
 class SignUpApp extends StatelessWidget {
-  const SignUpApp();
+  const SignUpApp({super.key});
 
   @override
   Widget build(BuildContext context) 
@@ -16,7 +16,7 @@ class SignUpApp extends StatelessWidget {
 
 class SignUpScreen extends StatelessWidget 
 {
-  const SignUpScreen();
+  const SignUpScreen({super.key});
 
   @override
   Widget build(BuildContext context) 
@@ -31,7 +31,7 @@ class SignUpScreen extends StatelessWidget
 
 class WelcomeScreen extends StatelessWidget 
 {
-  const WelcomeScreen();
+  const WelcomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) 
@@ -45,7 +45,7 @@ class WelcomeScreen extends StatelessWidget
 
 class SignUpForm extends StatefulWidget 
 {
-  const SignUpForm();
+  const SignUpForm({super.key});
 
   @override
   State<SignUpForm> createState() => _SignUpFormState();
@@ -132,7 +132,7 @@ class AnimatedProgressIndicator extends StatefulWidget
 {
   final double value;
 
-  const AnimatedProgressIndicator({ required this.value });
+  const AnimatedProgressIndicator({super.key,  required this.value });
 
   @override
   State<AnimatedProgressIndicator> createState() { return _AnimatedProgressIndicatorState(); }
@@ -148,7 +148,7 @@ class _AnimatedProgressIndicatorState extends State<AnimatedProgressIndicator> w
   void initState() 
   {
     super.initState();
-    _controller = AnimationController(duration: Duration(milliseconds: 1200), vsync: this);
+    _controller = AnimationController(duration: const Duration(milliseconds: 1200), vsync: this);
 
     final colorTween = TweenSequence([
       TweenSequenceItem(
